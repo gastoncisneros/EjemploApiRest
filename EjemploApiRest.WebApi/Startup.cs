@@ -1,4 +1,6 @@
+using EjemploApiRest.Abstractions;
 using EjemploApiRest.Application;
+using EjemploApiRest.DataAccess;
 using EjemploApiRest.Repository;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -35,6 +37,7 @@ namespace EjemploApiRest.WebApi
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "EjemploApiRest.WebApi", Version = "v1" });
             });
 
+            services.AddSingleton(typeof(IDbContext<>), typeof(DbContext<>));
             services.AddScoped(typeof(IApplication<>), typeof(Application<>));
             services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
         }

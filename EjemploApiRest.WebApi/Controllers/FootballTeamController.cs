@@ -18,5 +18,11 @@ namespace EjemploApiRest.WebApi.Controllers
         {
             _football = football;
         }
+
+        [HttpGet]
+        public IActionResult GetAll()
+        {
+            return Ok(_football.GetAll());
+        }
     }
 }

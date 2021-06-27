@@ -9,26 +9,33 @@ namespace EjemploApiRest.Repository
 
     }
 
-    public class Repository<T> : IRepository<T>
+    public class Repository<T> : IRepository<T> where T : IEntity
     {
+        IDbContext<T> _dbContext;
+
+        public Repository(IDbContext<T> dbContext)
+        {
+            _dbContext = dbContext;
+        }
+
         public void Delete(int id)
         {
-            throw new NotImplementedException();
+            _dbContext.Delete(id);
         }
 
         public IList<T> GetAll()
         {
-            throw new NotImplementedException();
+            return _dbContext.GetAll();
         }
 
         public T GetById(int id)
         {
-            throw new NotImplementedException();
+            return _dbContext.GetById(id);
         }
 
         public T Save(T entity)
         {
-            throw new NotImplementedException();
+            return _dbContext.Save(entity);
         }
     }
 }
