@@ -1,8 +1,11 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
-namespace EjemploApiRest.Entities
+namespace EjemploApiRest.WebApi.DTOs
 {
-    public class FootballTeam : Entity
+    public class FootballTeamDTO
     {
         public string Name { get; set; }
         public double Score { get; set; }

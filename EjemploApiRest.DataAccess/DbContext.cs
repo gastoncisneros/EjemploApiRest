@@ -1,11 +1,23 @@
 ﻿using EjemploApiRest.Abstractions;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace EjemploApiRest.DataAccess
 {
-    public class DbContext<T> : IDbContext<T> where T : IEntity
+    public class DbContext<T> : IDbContext<T> where T : class,IEntity
     {
+        DbSet<T> _items;
+
+        ApiDbContext _apiDbContext;
+
+        public DbContext(ApiDbContext apiDbContext)
+        {
+            _apiDbContext = apiDbContext;
+            _items = apiDbContext.Set<T>();
+        }
+
         public void Delete(int id)
         {
             throw new NotImplementedException();
@@ -13,17 +25,19 @@ namespace EjemploApiRest.DataAccess
 
         public IList<T> GetAll()
         {
-            throw new NotImplementedException();
+            return _items.ToList();
         }
 
         public T GetById(int id)
         {
-            throw new NotImplementedException();
+            return _items.Where(x => x.Id.Equals(id)).FirstOrDefault();
         }
 
         public T Save(T entity)
         {
-            throw new NotImplementedException();
+            _items.Add(entity);
+            _apiDbContext.SaveChanges();
+            return entity;
         }
     }
 }
