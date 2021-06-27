@@ -3,17 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31410.357
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EjemploApiRest.WebApi", "EjemploApiRest.WebApi\EjemploApiRest.WebApi.csproj", "{61D59757-204B-41E0-BF05-969909281638}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EjemploApiRest.WebApi", "EjemploApiRest.WebApi\EjemploApiRest.WebApi.csproj", "{61D59757-204B-41E0-BF05-969909281638}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EjemploApiRest.Application", "EjemploApiRest.Application\EjemploApiRest.Application.csproj", "{7E113EC1-A60D-4DFD-86C1-F6DB4F238493}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EjemploApiRest.Application", "EjemploApiRest.Application\EjemploApiRest.Application.csproj", "{7E113EC1-A60D-4DFD-86C1-F6DB4F238493}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EjemploApiRest.Entities", "EjemploApiRest.Entities\EjemploApiRest.Entities.csproj", "{831F58E6-CB05-4E3D-976C-EF0D9C13B3CF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EjemploApiRest.Entities", "EjemploApiRest.Entities\EjemploApiRest.Entities.csproj", "{831F58E6-CB05-4E3D-976C-EF0D9C13B3CF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EjemploApiRest.Repository", "EjemploApiRest.Repository\EjemploApiRest.Repository.csproj", "{84E1BBC2-C2EF-46BD-AF08-D2DF3BE279B1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EjemploApiRest.Repository", "EjemploApiRest.Repository\EjemploApiRest.Repository.csproj", "{84E1BBC2-C2EF-46BD-AF08-D2DF3BE279B1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EjemploApiRest.Services", "EjemploApiRest.Services\EjemploApiRest.Services.csproj", "{6234F3C6-E58F-44D4-A2CE-D2049999311E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EjemploApiRest.Services", "EjemploApiRest.Services\EjemploApiRest.Services.csproj", "{6234F3C6-E58F-44D4-A2CE-D2049999311E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EjemploApiRest.DataAccess", "EjemploApiRest.DataAccess\EjemploApiRest.DataAccess.csproj", "{BDD9BB5D-E325-48DD-ABC6-D84CE7F2434A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EjemploApiRest.DataAccess", "EjemploApiRest.DataAccess\EjemploApiRest.DataAccess.csproj", "{BDD9BB5D-E325-48DD-ABC6-D84CE7F2434A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EjemploApiRest.Abstractions", "EjemploApiRest.Abstractions\EjemploApiRest.Abstractions.csproj", "{9EA468CF-FC22-432F-9427-E91FD8225113}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{BDD9BB5D-E325-48DD-ABC6-D84CE7F2434A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BDD9BB5D-E325-48DD-ABC6-D84CE7F2434A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BDD9BB5D-E325-48DD-ABC6-D84CE7F2434A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9EA468CF-FC22-432F-9427-E91FD8225113}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9EA468CF-FC22-432F-9427-E91FD8225113}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9EA468CF-FC22-432F-9427-E91FD8225113}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9EA468CF-FC22-432F-9427-E91FD8225113}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
