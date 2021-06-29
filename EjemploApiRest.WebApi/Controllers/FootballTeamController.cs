@@ -1,5 +1,7 @@
 ﻿using EjemploApiRest.Application;
 using EjemploApiRest.Entities;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -9,6 +11,7 @@ using System.Threading.Tasks;
 
 namespace EjemploApiRest.WebApi.Controllers
 {
+    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
     [Route("api/[controller]")]
     [ApiController]
     public class FootballTeamController : ControllerBase

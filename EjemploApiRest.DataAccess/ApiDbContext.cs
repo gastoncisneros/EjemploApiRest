@@ -1,4 +1,5 @@
 ﻿using EjemploApiRest.Entities;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace EjemploApiRest.DataAccess
 {
-    public class ApiDbContext : DbContext
+    public class ApiDbContext : IdentityDbContext
     {
         public DbSet<FootballTeam> Teams { get; set; }
 
